@@ -29,4 +29,17 @@
 #define GPIO_OUT1_W1TS_REG (DR_REG_GPIO_BASE + 0x14)
 #define GPIO_OUT1_W1TC_REG (DR_REG_GPIO_BASE + 0x18)
 
+// GPIO interrupt registers
+#define GPIO_PIN_REG(i) (DR_REG_GPIO_BASE + i * 4)
+#define GPIO_STATUS_REG (DR_REG_GPIO_BASE + 0x44)
+#define GPIO_STATUS_W1TC_REG (DR_REG_GPIO_BASE + 0x48)
+#define GPIO_PIN_INT_ENA_REG (DR_REG_GPIO_BASE + 0x90)
+#define GPIO_PIN_INT_TYPE_REG (DR_REG_GPIO_BASE + 0x64)
+
+// Interrupt type definitions
+#define GPIO_INTR_DISABLE 0
+#define GPIO_INTR_POSEDGE 1
+#define GPIO_INTR_NEGEDGE 2
+#define GPIO_INTR_ANYEDGE 3
+
 #endif  // GPIO_DEFS_H

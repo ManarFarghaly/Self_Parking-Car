@@ -4,6 +4,10 @@
 #include <stdint.h>
 #include "pid_controller.h"
 
+// // Move these definitions here
+// #define BASE_SPEED 50  // Base speed percentage (0-100)
+// #define MAX_CORRECTION 30  // Maximum correction percentage
+
 // Motion control modes
 typedef enum {
     MOTION_STOP,
@@ -14,17 +18,11 @@ typedef enum {
     MOTION_FOLLOW_DISTANCE
 } MotionMode;
 
-// Initialize motion control system
+// Function declarations
 void motion_control_init(void);
-
-// Update motion control based on sensors
 void motion_control_update(float front_distance, float back_distance, 
                           float left_distance, float right_distance);
-
-// Set desired motion mode
 void motion_control_set_mode(MotionMode mode, float target_value);
-
-// Get current PID outputs for debugging
 void motion_control_get_pid_output(float *left_output, float *right_output);
 
 #endif

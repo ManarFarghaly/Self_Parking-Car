@@ -1,0 +1,6 @@
+{
+    "files.associations": {
+        "gpio_defs.h": "c",
+        "low_level_functions.h": "c"
+    }
+}
